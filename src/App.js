@@ -65,7 +65,7 @@ function ToDoListItems({ item, indexNumber, todolist, settodolist }) {
   return (
     <li className={item.completed ? 'completed' : ''} onClick={toggleStatus}>
       {indexNumber + 1}. {item.name}
-      <span onClick={deleteRow}>&times;</span>
+      <span onClick={deleteRow}><button>Delete</button></span>
     </li>
   );
 }
