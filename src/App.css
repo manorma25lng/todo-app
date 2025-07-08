@@ -2,37 +2,93 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Form styling */
+form {
+  width: 100%;
+  max-width: 800px;
+  margin: 30px auto;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 15px;
+  padding: 0 20px;
+}
+
+form input {
+  flex: 1;
+  padding: 12px 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+form input:focus {
+  border-color: #4c7daf;
+}
+
+form button {
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  background-color: #4c7daf;
   color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+form button:hover {
+  background-color: #abc1d7;
+  color: black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* ToDo list container */
+.outerDiv {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.outerDiv ul {
+  margin: 40px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.outerDiv ul li {
+  padding: 15px 20px;
+  background-color: #333;
+  color: white;
+  text-align: left;
+  position: relative;
+  font-size: 20px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+  cursor: pointer;
+}
+
+.outerDiv ul li:hover {
+  background-color: #444;
+}
+
+.outerDiv ul li span {
+  position: absolute;
+  right: 20px;
+  font-weight: bold;
+  font-size: 22px;
+  color: red;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.outerDiv ul li span:hover {
+  transform: scale(1.3);
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #999;
+  background-color: #222;
 }
